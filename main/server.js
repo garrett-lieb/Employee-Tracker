@@ -103,6 +103,9 @@ function viewEmployees() {
     });
 }
 
+// View employees by manager
+
+
 // Add a department
 function addDepartment() {
     inquirer.prompt([
@@ -231,7 +234,34 @@ function updateRole() {
 
 // Update an employee manager
 
-// View employees by manager
+function updateManager() {
+    db.query('SELECT * FROM employee', function (err, results) {
+        const employeeList = results.map(employee => {
+            return {
+                name: `${employee.first_name} ${employee.last_name}`,
+                value: employee.id
+            }
+        });
+        inquirer.prompt([
+            {
+                type: 'list',
+                name: 'employee_id',
+                message: 'Which employee would you like to update?',
+                choices: employeeList
+            },
+            {
+                type: 'input',
+                name: 'manager_id',
+                message: 'What is the employee\'s new manager ID?'
+            }
+        ]).then((response) => {
+            db.query('UPDATE employee SET manager_id = ? WHERE id = ?', [response.manager_id, response.employee_id], function (err, results) {
+                console.log('Employee manager updated.');
+                startApp();
+            });
+        });
+    });
+}
 
 // Delete departments
 
