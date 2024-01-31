@@ -1,19 +1,14 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
+require ('dotenv').config();
 
-const PORT = process.env.PORT || 3001;
-const app = express();
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 const db = mysql.createConnection(
     {
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
-        password: '*********',
+        password: 'wombatcombat',
         database: 'employees_db'
-
     },
     console.log(`Connected to the employee database.`)
 );
@@ -117,7 +112,7 @@ function addDepartment() {
     ]).then((response) => {
         db.query('INSERT INTO department SET ?', {name: response.department}, function (err, results) {
             console.log('Department added.');
-            startApp();
+            viewDepartments();
         });
     });
 }
