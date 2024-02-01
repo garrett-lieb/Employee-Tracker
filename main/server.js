@@ -27,7 +27,6 @@ inquirer.prompt([
                 'Add an employee', 
                 'Update an employee role', 
                 'Update an employee manager', 
-                'View employees by manager', 
                 'Delete departments', 
                 'Delete roles', 
                 'Delete employees']
@@ -57,9 +56,6 @@ inquirer.prompt([
             break;
         case 'Update an employee manager':
             updateManager();
-            break;
-        case 'View employees by manager':
-            viewByManager();
             break;
         case 'Delete departments':
             deleteDepartment();
