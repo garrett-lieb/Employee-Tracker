@@ -7,7 +7,8 @@ const db = mysql.createConnection(
     {
         host: '127.0.0.1',
         user: 'root',
-        password: 'wombatcombat',
+        //get password from .env file
+        password: process.env.DB_PASSWORD,
         database: 'employees_db'
     },
     console.log(`Connected to the employee database.`)
