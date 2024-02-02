@@ -4,9 +4,9 @@
 
 This is content management system using Inquire@8.2.4 and MySQL2 to track employees in the command line interface. It allows the user to view, edit, add, and delete employees, a well as their department, role within that department. Additionally, it allows the user to view, edit, and delete departments and roles therein.
 
-<img src="/README/images/1.png" width="100%" height="100%">
-<img src="/README/images/2.png" width="100%" height="100%">
-<img src="/README/images/3.png" width="100%" height="100%">
+<img src="/README images/1.png" width="100%" height="100%">
+<img src="/README images/2.png" width="100%" height="100%">
+<img src="/README images/3.png" width="100%" height="100%">
 
 ## Installation
 
