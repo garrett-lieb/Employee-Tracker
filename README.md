@@ -20,7 +20,13 @@ N/A
 
 ## Usage
 
-By opening the "main" folder in the command line, the user may execute "node server.js" to open the application. From there, the user may select from the options to view, edit, and delete: employees, departments, and roles. 
+By opening the "main" folder in the command line, the user may execute 
+- "mysql -u root -p" and enter their password. From there they should use commands
+- "SOURCE db/schema.sql" and "SOURCE db/seeds.sql" to seed the data in the db folder in the tables for
+    Employee
+    Department
+    Role
+- Finally the user should execute the command "node server.js" to start the application. From there, the user may select from the options to view, edit, and delete: employees, departments, and roles. As well as view various associated information within each of these tables.
 
 
 ## Credits
