@@ -89,13 +89,18 @@ function viewRoles() {
 
 // View all employees
 function viewEmployees() {
-    db.query('SELECT * FROM employee', function (err, results) {
+    // join salary based on role_id
+    db.query('SELECT employee.id, employee.first_name, employee.last_name, role.title, role.salary, department.name AS department FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id', function (err, results) {
         console.table(results);
         startApp();
     });
 }
+//     db.query('SELECT * FROM employee left ', function (err, results) {
+//         console.table(results);
+//         startApp();
+//     });
+// }
 
-// View employees by manager
 
 
 // Add a department
@@ -174,7 +179,8 @@ function addEmployee() {
                 name: 'role_id',
                 message: 'What is the employee\'s role ID?',
                 choices: roleList
-            }
+            },
+
         ]).then((response) => {
             db.query('INSERT INTO employee SET ?', {first_name: response.first_name, last_name: response.last_name, role_id: response.role_id}, function (err, results) {
                 console.log('Employee added.');
