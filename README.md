@@ -10,6 +10,7 @@ This is content management system using Inquire@8.2.4 and MySQL2 to track employ
 <img src="/README images/4.png" width="100%" height="100%">
 
 VIDEO OF FUNCTIONING APPLICATION:
+https://drive.google.com/file/d/1Krgi_TTQZ90XV6H5fTBtg8Clw6eKZHUz/view
 
 
 
