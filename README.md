@@ -26,6 +26,8 @@ By opening the "main" folder in the command line, the user may execute "node ser
 
 Setup for initial commits on schema.sql were achieved during turoting session with EdX tutor, Rene Trevino, on Jan 31, 2024. 
 
+Fixed line 93 of server.js that was preventing employee table from displaying properly after new employee was added during office hours with TA ALex Yu on Feb 1, 2024.
+
 ## Liscence
 
 MIT Liscence
