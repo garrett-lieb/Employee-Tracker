@@ -95,12 +95,6 @@ function viewEmployees() {
         startApp();
     });
 }
-//     db.query('SELECT * FROM employee left ', function (err, results) {
-//         console.table(results);
-//         startApp();
-//     });
-// }
-
 
 
 // Add a department
